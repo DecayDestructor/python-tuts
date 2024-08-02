@@ -6,7 +6,11 @@ def parent_function(person, coins):
     # coins = 3
 
     def play_game():
-        nonlocal coins
+        # nonlocal coins
+        # coins = 1
+        # coins -= 1
+        nonlocal coins  # This refers to the argument coin of the function
+        # coins = 1  # This line fixes the issue.
         coins -= 1
 
         if coins > 1:
